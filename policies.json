@@ -9,16 +9,28 @@
       "url": "https://transparency.meta.com/policies/ad-standards/"
     },
     {
+      "name": "Meta Advertising Policies",
+      "url": "https://www.facebook.com/policies/ads/"
+    },
+    {
       "name": "TikTok Community Guidelines",
       "url": "https://www.tiktok.com/community-guidelines/en/"
     },
     {
-      "name": "YouTube Community Guidelines",
-      "url": "https://support.google.com/youtube/answer/9288567"
+      "name": "TikTok Creator Academy - Algorithm",
+      "url": "https://www.tiktok.com/creator-academy/en/"
     },
     {
-      "name": "YouTube Shorts Policies",
-      "url": "https://support.google.com/youtube/answer/10048872"
+      "name": "YouTube Community Guidelines",
+      "url": "https://www.youtube.com/howyoutubeworks/policies/community-guidelines/"
+    },
+    {
+      "name": "YouTube Shorts Guidelines",
+      "url": "https://www.youtube.com/howyoutubeworks/product-features/shorts/"
+    },
+    {
+      "name": "Instagram Community Guidelines",
+      "url": "https://help.instagram.com/477434105621119"
     }
   ]
 }
