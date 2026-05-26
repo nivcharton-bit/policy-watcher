@@ -1,0 +1,34 @@
+name: Policy Watcher
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'  # Monday 10:00 UTC = 12:00 Israel time
+    - cron: '0 10 * * 4'  # Thursday 10:00 UTC = 12:00 Israel time
+  workflow_dispatch:  # allows manual run for testing
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run watcher
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python watcher.py
+
+      - name: Save snapshots
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update policy snapshots"
