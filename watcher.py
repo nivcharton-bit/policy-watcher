@@ -21,7 +21,6 @@ def get_page_hash(url):
         headers = {"User-Agent": "Mozilla/5.0"}
         response = requests.get(url, headers=headers, timeout=15)
         soup = BeautifulSoup(response.text, "lxml")
-        # Extract only the main text content, ignore menus/headers
         for tag in soup(["script", "style", "nav", "header", "footer"]):
             tag.decompose()
         text = soup.get_text(separator=" ", strip=True)
@@ -77,7 +76,7 @@ def main():
     save_snapshots(snapshots)
 
     if not changes_found:
-        print("Scan complete. No changes detected.")
+        send_telegram("✅ Policy scan complete — no changes detected.")
 
 if __name__ == "__main__":
     main()
