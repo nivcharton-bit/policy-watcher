@@ -1,0 +1,24 @@
+{
+  "sources": [
+    {
+      "name": "Meta Community Standards",
+      "url": "https://transparency.meta.com/policies/community-standards/"
+    },
+    {
+      "name": "Meta Ad Standards",
+      "url": "https://transparency.meta.com/policies/ad-standards/"
+    },
+    {
+      "name": "TikTok Community Guidelines",
+      "url": "https://www.tiktok.com/community-guidelines/en/"
+    },
+    {
+      "name": "YouTube Community Guidelines",
+      "url": "https://support.google.com/youtube/answer/9288567"
+    },
+    {
+      "name": "YouTube Shorts Policies",
+      "url": "https://support.google.com/youtube/answer/10048872"
+    }
+  ]
+}
