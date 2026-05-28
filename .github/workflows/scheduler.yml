@@ -36,3 +36,17 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update policy snapshots"
+
+  keep-alive:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Keep alive
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "github-actions"
+          git commit --allow-empty -m "keep-alive"
+          git push
