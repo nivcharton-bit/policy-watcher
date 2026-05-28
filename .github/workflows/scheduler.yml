@@ -2,8 +2,8 @@ name: Policy Watcher
 
 on:
   schedule:
-    - cron: '0 10 * * 1'  # Monday 10:00 UTC = 12:00 Israel time
-    - cron: '0 10 * * 4'  # Thursday 10:00 UTC = 12:00 Israel time
+    - cron: '0 10 * * 1'  # Monday 10:00 UTC = 13:00 Israel time
+    - cron: '0 10 * * 4'  # Thursday 10:00 UTC = 13:00 Israel time
   workflow_dispatch:
 
 jobs:
@@ -28,6 +28,8 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID_GROUP: ${{ secrets.TELEGRAM_CHAT_ID_GROUP }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python watcher.py
 
       - name: Save snapshots
